@@ -123,10 +123,10 @@ public class BoardController {
         model.addAttribute("boardDto", boardDto);
         return "/board/write";
       }
-      boardDto.setNo(no);
+      //boardDto.setNo(no);
       int BoardGroup = boardService.getBoardGroup(no);
       int BoardLevel = boardService.getMaxBoardLevel(BoardGroup);
-      boardDto.setBoardLevel(BoardLevel + 1);
+    //  boardDto.setBoardLevel(BoardLevel + 1);
       int result = boardService.writeBoardReply(boardDto);
       return "redirect:/board/list";
     }
